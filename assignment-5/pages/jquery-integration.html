@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Selector</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../assets/js/lib/jquery-3.7.1.min..js"></script>
+    <script src="../assets/js/lib/bootstrap.bundle.min.js"></script>
+
+    <script>
+      jQuery(document).ready(function () {
+        jQuery(".select-class-button-alert").click(function () {
+          alert("Click from Select By Class alert");
+        });
+
+        jQuery("#select-id-button-alert").click(function () {
+          alert("Click from Select By ID alert");
+        });
+
+        jQuery("input").click(function () {
+          alert("Click from Select By Tag alert");
+        });
+        jQuery(".select-class-button-log").click(function () {
+          console.log("Click from Select By Class log");
+        });
+
+        jQuery("#select-id-button-log").click(function () {
+          console.log("Click from Select By ID log");
+        });
+
+        jQuery("button").click(function () {
+          console.log("Click from Select By Tag log");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="row p-5 g-2">
+      <div class="col-12">
+        <button class="btn btn-success select-class-button-alert">
+          Select By Class alert
+        </button>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-secondary" id="select-id-button-alert">
+          Select By ID alert
+        </button>
+      </div>
+      <div class="col-12">
+        <input
+          type="button"
+          class="btn btn-danger"
+          value="Select By Tag alert"
+        />
+      </div>
+    </div>
+    <!-- for console.log() -->
+    <div class="row p-5 g-2">
+      <div class="col-12">
+        <button class="btn btn-success select-class-button-log">
+          Select By Class log
+        </button>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-secondary" id="select-id-button-log">
+          Select By ID log
+        </button>
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn btn-danger">Select By Tag log</button>
+      </div>
+    </div>
+  </body>
+</html>
